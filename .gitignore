@@ -1,8 +1,9 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 # https://git-scm.com/docs/gitignore
-# https://help.github.com/articles/ignoring-files
 # Example .gitignore files: https://github.com/github/gitignore
 /bower_components/
 /node_modules/
-/_psd/Moj_web_layout.psd
-/_psd/Monitor-Code.psd
-.greysaga.html
+/_psd/
+.exmpl.html
+.idea/

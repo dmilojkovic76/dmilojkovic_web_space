@@ -10,8 +10,8 @@
 
 
 
-# dmilojkovic_web_space
+#dmilojkovic_web_space
 Source kod mog sajta.
 
 
-Na originalnu ideju i inspiraciju za moj layout dosao zam zahvaljujuci [Tomas Laurinavicius](http://tomaslau.com/).
+Na originalnu ideju i inspiraciju za moj layout dosao zam zahvaljujuci [Tomas Laurinavicius](http://tomaslau.com/) i Steve Everett.

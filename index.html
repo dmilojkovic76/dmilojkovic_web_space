@@ -1,61 +1,146 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="sr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dušan Milojković</title>
+        <meta name="description" content="Portfolio of Dušan Milojković, a Software & Web Developer from Serbia">
+        <meta name="keywords" content="d00mil, digital illustration, UI design, UX design, front-end, frontend, front-end developer, developer, javascript, web design, web developer, digital art, mobile apps, 3D, modelling" />
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+        <meta name="robots" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
 
-<head>
-    <title>Dušan Milojković</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="d00mil, digital illustration, UI design, UX design, front-end, frontend, front-end developer, developer, javascript, web design, web developer, digital art, mobile apps, 3D, modelling" />
-    <meta name="description" content="Portfolio of Dušan Milojković, a hybrid Web Developer from Serbia" />
-    <meta name="robots" content="index,follow" />
-    <meta name="googlebot" content="index,follow" />
-    <meta property="og:title" content="Dušan Milojković" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://dmilojkovic.co.nf" />
-    <meta property="og:image" content="http://dmilojkovic.co.nf/img/share_img/main.jpg" />
-    <meta property="og:site_name" content="greysaga.com/demo/gsv2" />
-    <meta property="og:description" content="Portfolio of Dušan Milojković, a hybrid Web Developer from Serbia" />
-    <!-- <meta name="google-site-verification" content="uJ8eqod3di-SQkyUwbh4TGSIjkSZXjMH4-sT9z13Bho" /> -->
-    <link rel="canonical" href="http://dmilojkovic.co.nf/">
-    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <!-- <script src="js/modernizr-custom.js"></script> -->
-</head>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- favicon.ico bi trebalo da bude u root direktorijumu -->
+        <!--<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">-->
 
-<body>
-  <!-- Ovaj div je meni sto ulazi sa leva na desno u mobile modu -->
-  <div class="mobile_menu_links">
-    <ul>
-      <li><a href="index.html">About</a></li>
-      <li><a href="work.html">My work</a></li>
-      <li><a href="play.html">My playground</a></li>
-      <li><a href="mailto:dmilojkovic@gmail.com">Contact me</a></li>
-    </ul>
-    <ul class="mobile_menu_github">
-      <li><a href="https://github.com/dmilojkovic76">github/dmilojkovic</a></li>
-    </ul>
-  </div>
-  <!-- Kad je prethodni div aktivan ovaj se pojavi ispod njega a preko svega ostalog -->
-  <div class="page_overlay"></div>
+        <link rel="canonical" href="http://dmilojkovic.co.nf/">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-  <!-- Ovo je glavni levi ili gornji header -->
-  <div class="main_header">
-    <div class="mobile_menu_div">
-      <span class="menu_btn"></span>
-    </div>
-    <div class="share_div" title="Share this">
-      <span class="share_btn"></span>
-      <div class="share_drop_down_div">
-        <a href="#" id="share_to_fb"><span class="fb_icon">facebook</span></a>
-        <a href="#" id="share_to_g"><span class="gplus_icon">gplus</span></a>
-      </div>
-    </div>
-  </div>
+        <!-- Odavde pocinje markap sajta -->
+        <!-- element main sadrzi ceo layout -->
+        <main class="wrap group">
+            <!-- unutar maina su element aside za sidebar i div content za ostali sadrzaj -->
+            <!-- ovde pocinje sidebar -->
+            <aside class="sidebar">
+                <!-- sidebar je podeljen na dva dela, div my-info za sliku i linkove, i element nav menu za linkove-->
+                <div class="my-info">
+                    <img src="img/myFace.png" alt="Dusan Milojkovic" class="portfolio-image">
+                    <h1>Dušan Milojković</h1>
+                    <h2>Junior WEB/Frontend<br>& Software Developer</h2>
+                    <div class="social group">
+                        <a href="#" class="facebook">Facebook</a>
+                        <a href="#" class="googleplus">Google+</a>
+                        <a href="#" class="skype">Skype</a>
+                        <a href="#" class="github">GitHUB</a>
+                    </div>
+                </div>
+                <nav class="menus">
+                    <h3 class="work">Work</h3>
+                    <ul>
+                        <li><a href="#" class="current-menu-item">Latest</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Mobile Design</a></li>
+                        <li><a href="#">3D Modelling</a></li>
+                    </ul>
 
+                    <h3 class="about">About</h3>
+                    <ul>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Experience</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
 
+                    <h3 class="contact">Contact</h3>
+                    <ul>
+                        <li><a href="#">Address</a></li>
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">Social Networks</a></li>
+                        <li><a href="#">Email</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- odavde je glavni sadrzaj strane -->
+            <div class="content">
+                <article class="portfolio-item group first">
+                    <header class="portfolio-info">
+                        <div class="date">7 Nov 2013</div>
+                        <div class="description">
+                            Free PSD template for startups, small businesses and basically for everyone liking good design.
+                        </div>
+                        <div class="meta">
+                            <p><strong>Client:</strong> Despreneur</p>
+                            <p><strong>Tags:</strong> Web Design</p>
+                        </div>
+                    </header>
+                    <figure class="portfolio-image">
+                        <img src="img/Monitor-Code.png" alt="Free PSD Templates">
+                    </figure>
+                </article>
+                <article class="portfolio-item group">
+                    <header class="portfolio-info">
+                        <div class="date">7 Nov 2013</div>
+                        <div class="description">
+                            Free PSD template for startups, small businesses and basically for everyone liking good design.
+                        </div>
+                        <div class="meta">
+                            <p><strong>Client:</strong> Despreneur</p>
+                            <p><strong>Tags:</strong> Web Design</p>
+                        </div>
+                    </header>
+                    <figure class="portfolio-image">
+                        <img src="img/Monitor-Code.png" alt="Moody Shot">
+                    </figure>
+                </article>
+                <article class="portfolio-item group">
+                    <header class="portfolio-info">
+                        <div class="date">7 Nov 2013</div>
+                        <div class="description">
+                            Free PSD template for startups, small businesses and basically for everyone liking good design.
+                        </div>
+                        <div class="meta">
+                            <p><strong>Client:</strong> Despreneur</p>
+                            <p><strong>Tags:</strong> Web Design</p>
+                        </div>
+                    </header>
+                    <figure class="portfolio-image">
+                        <img src="img/Monitor-Code.png" alt="New York">
+                    </figure>
+                </article>
+                <article class="portfolio-item group loading-wrap" style="display: none">
+                    <header class="portfolio-info">
+                    </header>
+                    <figure class="portfolio-image">
+                        <div class="loading">
+                            <img src="img/loading.png" alt="Loading" class="rotate">&nbsp;Loading...
+                        </div>
+                    </figure>
+                </article>
+            </div>
+        </main>
 
-  <!-- Moj glavni JS kod -->
-  <script src="js/main.min.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <!-- Moj glavni JS kod -->
+        <script src="js/app.js"></script>
 
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
 </html>
