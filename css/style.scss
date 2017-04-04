@@ -15,6 +15,9 @@ $font-size: 14px;
 $font-family: 'Lato', sans-serif;
 $line-height: 1.4;
 
+$heading-font-family: 'Coda', cursive;
+$heading-font-size: 55px;
+
 $break-four: 1050px;
 $break-three: 760px;
 $break-two: 520px;
@@ -23,6 +26,11 @@ $break-one: 360px;
 //Free google font 'Lato' by Łukasz Dziedzic under Open Font License
 //https://fonts.google.com/specimen/Lato
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+//Free google font 'Coda' by Vernon Adams under Open Font License
+//https://fonts.google.com/specimen/Coda
+@import url('https://fonts.googleapis.com/css?family=Coda');
+//Normalize.css 6.0 makes browsers render all elements more consistently and in line with modern standards.
+//It precisely targets only the styles that need normalizing.
 @import url('normalize.css');
 
 //Utilities
@@ -65,6 +73,10 @@ body {
         width: 20%;
     }
 
+    @media screen and (min-width: $break-four) {
+        float: left;
+        width: 15%;
+    }
 
     .my-info {
         text-align: center;
@@ -85,6 +97,12 @@ body {
 
         h2 {
             font-size: 100%;
+        }
+
+        @media screen and (min-width: $break-three){
+            .social, h1, h2 {
+                display: none;
+            }
         }
 
         .social {
@@ -110,7 +128,6 @@ body {
                     &:hover {
                         background-position: 0 -25px;
                     }
-
                 }
 
                 &.googleplus {
@@ -255,15 +272,173 @@ body {
     }
 }
 
+
+.zaglavlje {
+    width: 100%;
+    min-height: 100%;
+    color: $black;
+    background: $white;
+    padding-top: $padding*1.5;
+    display: none;
+
+    @media screen and (min-width: $break-four) {
+        float: left;
+        width: 85%;
+        display: block;
+    }
+
+    @media screen and (min-width: $break-three) {
+        float: left;
+        width: 80%;
+        display: block;
+    }
+
+    .main-info {
+        padding-left: $padding*2;
+        float: left;
+
+        h1, h2 {
+            font-family: $heading-font-family;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: $heading-font-size;
+            line-height: 1;
+        }
+
+        h2 {
+            font-size: 100%;
+        }
+    }
+
+    .social-info {
+        float: right;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-right: $padding*10;
+            text-align: left;
+
+            li{
+                height: 25px;
+                a {
+                    color: $black;
+                    text-decoration: none;
+                    -webkit-transition: color 0.4s ease;
+                    -moz-transition: color 0.4s ease;
+                    -o-transition: color 0.4s ease;
+                    -ms-transition: color 0.4s ease;
+                    transition: color 0.4s ease;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 75px;
+                        height: 25px;
+                        width: 25px;
+                        display: block;
+                        background: url(../img/social-color-sprite.png) no-repeat;
+
+                        @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) {
+                            background: url(../img/social-color-sprite@2x.png) no-repeat;
+                            background-size: 101px 51px;
+                        }
+                    }
+
+                    &.facebook {
+                        &:after{
+                            background-position: 0 0;
+                        }
+                    }
+
+                    &.googleplus {
+                        &:after{
+                            background-position: -25px 0;
+
+                            &:hover {
+                                background-position: -25px -25px;
+                            }
+                        }
+                    }
+
+                    &.skype {
+                        &:after{
+                            background-position: -50px 0;
+                        }
+
+                        &:hover {
+                            background-position: -50px -25px;
+                        }
+                    }
+
+                    &.github {
+                        &:after{
+                            background-position: -75px 0;
+                        }
+
+                        &:hover {
+                            background-position: -75px -25px;
+                        }
+                    }
+
+                    &:hover {
+                        color: $red;
+                        -webkit-transition: color 0.4s ease;
+                        -moz-transition: color 0.4s ease;
+                        -o-transition: color 0.4s ease;
+                        -ms-transition: color 0.4s ease;
+                        transition: color 0.4s ease;
+
+                        &.facebook {
+                            &:after{
+                                background-position: 0 -25px;
+                            }
+                        }
+
+                        &.googleplus {
+                            &:after{
+                                background-position: -25px -25px;
+                            }
+                        }
+
+                        &.skype {
+                            &:after{
+                                background-position: -50px -25px;
+                            }
+                        }
+
+                        &.github {
+                            &:after{
+                                background-position: -75px -25px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
 .content {
     width: 100%;
     min-height: 100%;
     background: $white;
 
+    @media screen and (min-width: $break-four) {
+        float: left;
+        width: 85%;
+    }
+
     @media screen and (min-width: $break-three) {
         float: left;
         width: 80%;
     }
+
 
     .portfolio-item {
         background: $grey;
@@ -292,10 +467,11 @@ body {
             -moz-box-sizing: border-box;
             -ms-box-sizing: border-box;
             box-sizing: border-box;
+            margin: 0;
 
             @media screen and (min-width: $break-three) {
                 float: left;
-                width: 30%;
+                width: 28%;
             }
 
             .date {
@@ -331,15 +507,16 @@ body {
             background: $white;
             border-left: 1px solid darken($grey, 10%);
             text-align: center;
+            margin: 0;
 
             @media screen and (min-width: $break-three) {
                 float: left;
-                width: 70%;
+                width: 68%;
             }
 
             img {
                 width: 100%;
-                max-width: 610px;
+                max-width: 800px;
                 height: auto;
             }
 
